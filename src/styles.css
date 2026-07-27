@@ -1,0 +1,106 @@
+/* ============================================================
+   ESTILOS GLOBALES - Aplicación Empresarial Angular
+   ============================================================
+   Este archivo define los estilos globales de la aplicación,
+   incluyendo la configuración del tema de Angular Material,
+   estilos de Tailwind CSS, y estilos personalizados.
+   ============================================================ */
+
+/* ─── Tailwind CSS ─────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ─── Tema de Angular Material ───────────────────────────────
+   Configuración de paleta de colores corporativos:
+   - Primary: Azul corporativo (#1a237e / indigo)
+   - Accent: Teal (#00897b)
+   - Warn: Rojo (#d32f2f)
+   ────────────────────────────────────────────────────────── */
+
+/* Estilos base de la aplicación */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Contenedor principal de la aplicación */
+app-root {
+  display: block;
+  height: 100%;
+}
+
+/* ─── Personalización de Angular Material ────────────────── */
+
+/* Botones de toolbar */
+.mat-toolbar .mat-mdc-icon-button {
+  color: white;
+}
+
+/* Tarjetas con sombra suave */
+.mat-mdc-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Encabezados de tablas */
+.mat-mdc-header-row {
+  background-color: #1a237e !important;
+}
+
+.mat-mdc-header-cell {
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+/* Filas de tablas con hover */
+.mat-mdc-row:hover {
+  background-color: #e8eaf6 !important;
+  cursor: pointer;
+}
+
+/* Campos de formulario */
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+/* ─── Utilidades personalizadas ──────────────────────────── */
+
+/* Barra de desplazamiento personalizada */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animaciones de transición de ruta */
+.route-animation {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Estilos responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .mat-mdc-cell {
+    font-size: 12px !important;
+  }
+}
